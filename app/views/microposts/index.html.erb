@@ -1,0 +1,9 @@
+<h1>Posts</h1>
+<p>On this page you can see all posts and make a post.</p>
+
+
+<%= form_for @micropost do |f| %>
+<%= render :partial => "shared/form_error_messages", :locals => {:model_object => @micropost} %>
+<%= f.text_area :content, :placeholder => "What's on your mind?" %>
+<%= f.submit "Post" %>
+<% end %>
